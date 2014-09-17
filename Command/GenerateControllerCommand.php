@@ -127,7 +127,7 @@ EOT
 
             try {
                 $bundleMap = $this->getContainer()->get('kernel')->getBundle($bundle, false);
-                $b = $bundleMap[count($bundleMap) - 1];
+                $b = $bundleMap[0];
 
                 if (!file_exists($b->getPath().'/Controller/'.$controller.'Controller.php')) {
                     break;
